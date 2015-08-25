@@ -2,81 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=false;">
     <title>Calculator</title>
 
     <link rel="stylesheet" href="./node_modules/material-design-lite/material.min.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./build/css/main.css">
     <script src="./node_modules/material-design-lite/material.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
     <div class="display mdl-grid--no-spacing">
-      <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet">6 (8 tablet)</div>
+        <div class="mdl-cell mdl-cell--12-col"></div>
     </div>
-    <div class="keyboard mdl-grid">
-        <div class="mdl-cell mdl-cell--10-col mdl-cell--10-col-tablet mdl-grid numbers">
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>7</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>8</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>9</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>4</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>5</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>6</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>1</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>2</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>3</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>,</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>0</span>
-                </button>
-            </div>
-            <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
-                <button class="mdl-button mdl-js-button">
-                    <span>=</span>
-                </button>
-            </div>
+    <div class="keyboard mdl-grid mdl-grid--no-spacing">
+        <div class="mdl-grid--no-spacing mdl-cell--3-col-phone numeric">
+            <button class="mdl-button mdl-js-button">
+                <span>7</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>8</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>9</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>4</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>5</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>6</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>1</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>2</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>3</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>,</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>0</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>=</span>
+            </button>
         </div>
-        <div class="mdl-cell mdl-cell--2-col mdl-cell--2-col-tablet">6 (8 tablet)</div>
+        <div class="operations mdl-grid--no-spacing mdl-cell--1-col-phone">
+            <button class="mdl-button mdl-js-button">
+                <span>+</span>
+            </button>
+            <button class="mdl-button mdl-js-button">
+                <span>-</span>
+            </button><button class="mdl-button mdl-js-button">
+                <span>%</span>
+            </button>
+            </button><button class="mdl-button mdl-js-button">
+                <span>*</span>
+            </button>
+        </div>
     </div>
 </body>
 </html>

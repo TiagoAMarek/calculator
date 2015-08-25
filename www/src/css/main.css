@@ -1,13 +1,28 @@
-.keyboard .numbers{
+.mdl-button {
+    width: 77px;
+    height: 77px;
+}
+
+.mdl-button--fab.mdl-button--mini-fab {
+    width: 50px;
+    height: 50px;
+    margin: 13px 0 13px 10px;
+}
+
+.keyboard .numeric{
     background-color: #000;
 }
 
-.keyboard .numbers span{
+.keyboard .numeric span{
     color: #fff;
+    font-size: 47px;
 }
 
-.numbers button {
-    width: 100%;
-    height: 100%;
+.keyboard .operations{
+    background-color: #414347;
+}
+
+.keyboard .operations span{
+    color: #fff;
     font-size: 47px;
 }
