@@ -1,3 +1,22 @@
+.display {
+    height: 60px;
+}
+
+.keyboard .numeric{
+    background-color: #000;
+}
+
+.keyboard button{
+    color: #fff;
+    font-size: 35px;
+    display: inline-block;
+}
+
+
+.keyboard .operations{
+    background-color: #414347;
+}
+
 .mdl-button {
     width: 77px;
     height: 77px;
@@ -7,22 +26,4 @@
     width: 50px;
     height: 50px;
     margin: 13px 0 13px 10px;
-}
-
-.keyboard .numeric{
-    background-color: #000;
-}
-
-.keyboard .numeric span{
-    color: #fff;
-    font-size: 47px;
-}
-
-.keyboard .operations{
-    background-color: #414347;
-}
-
-.keyboard .operations span{
-    color: #fff;
-    font-size: 47px;
 }

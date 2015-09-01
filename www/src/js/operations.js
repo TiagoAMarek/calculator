@@ -8,15 +8,15 @@ var Operations = function() {
     var PUBLIC  = this,
         PRIVATE = {};
 
-    PUBLIC.division = function(a, b) {
+    PUBLIC.divide = function(a, b) {
         return parseFloat(a)/parseFloat(b);
     };
 
-    PUBLIC.multiplication = function(a, b) {
+    PUBLIC.multiply = function(a, b) {
         return parseFloat(a)*parseFloat(b);
     };
 
-    PUBLIC.minus = function(a, b) {
+    PUBLIC.subtract = function(a, b) {
         return parseFloat(a)-parseFloat(b);
     };
 
