@@ -15,3 +15,6 @@ var UICalculator = function() {
 
     return PUBLIC;
 };
+
+var calc = new UICalculator();
+calc.init();
