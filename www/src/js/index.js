@@ -11,27 +11,24 @@ var UICalculator = function() {
 
     PRIVATE.calculate = function (str) {
         var total = 0;
-        str = str.split("");
-        var bla = str.length % 2;
-        if(bla !== 0){
-            for (var i = 0; i < str.length; i++) {
-                if(/[\+\*\/\-]/.test(str[i])) {
-                    switch(str[i]){
-                        case '+':
-                            total = op.sum(str[i-1], str[i+1]);
-                            break;
-                        case '-':
-                            total = op.subtract(str[i-1], str[i+1]);
-                            break;
-                        case '*':
-                            total = op.multiply(str[i-1], str[i+1]);
-                            break;
-                        case '/':
-                            total = op.divide(str[i-1], str[i+1]);
-                            break;
-                    }
-                    str[i+1] = total;
+        str = str.split(" ");
+        for (var i = 0; i < str.length; i++) {
+            if(/[\+\*\/\-]/.test(str[i]) && str.length > i) {
+                switch(str[i]){
+                    case '+':
+                        total = op.sum(str[i-1], str[i+1]);
+                        break;
+                    case '-':
+                        total = op.subtract(str[i-1], str[i+1]);
+                        break;
+                    case '*':
+                        total = op.multiply(str[i-1], str[i+1]);
+                        break;
+                    case '/':
+                        total = op.divide(str[i-1], str[i+1]);
+                        break;
                 }
+                str[i+1] = total;
             }
         }
         return total;
@@ -49,7 +46,11 @@ var UICalculator = function() {
             var target = evt.target;
             if(target.tagName.toLowerCase() === "button") {
                 if(target.innerHTML !== '=') {
-                    displayContent.innerHTML += target.innerHTML;
+                    if(/[\+\*\/\-]/.test(target.innerHTML)){
+                        displayContent.innerHTML += " "+target.innerHTML+" ";
+                    } else {
+                        displayContent.innerHTML += target.innerHTML;
+                    }
                 } else {
                     if(/[\+\*\/\-]/.test(displayContent.innerHTML)){
                         var total = PRIVATE.calculate(displayContent.innerHTML);
@@ -60,8 +61,9 @@ var UICalculator = function() {
         });
     };
 
+
     PUBLIC.init = function () {
-        PRIVATE.keyboardListener();
+        document.addEventListener('deviceready', PRIVATE.keyboardListener());
     };
 
     return PUBLIC;
