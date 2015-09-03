@@ -1,3 +1,8 @@
+.grid-container {
+    position: absolute;
+    bottom: 0;
+}
+
 .display {
     height: 60px;
     text-align: right;
