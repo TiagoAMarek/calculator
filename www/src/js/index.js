@@ -24,7 +24,7 @@ var UICalculator = function() {
             nextValue = i+1;
             prevValue = i-1;
 
-            if(/[\+\*\/\-]/.test(str[i]) && str.length > nextValue) {
+            if(op.regex.test(str[i]) && str.length > nextValue) {
                 total = op.calculate(str[prevValue], str[nextValue], str[i]);
                 str[nextValue] = total;
             }
@@ -44,7 +44,7 @@ var UICalculator = function() {
             var target = evt.target;
             if(target.tagName.toLowerCase() === "button") {
                 if(target.innerHTML !== '=' && target.innerHTML !== "C") {
-                    if(/[\+\*\/\-]/.test(target.innerHTML)){
+                    if(op.regex.test(target.innerHTML)){
                         displayContent.innerHTML += " "+target.innerHTML+" ";
                     } else {
                         displayContent.innerHTML += target.innerHTML;
@@ -52,7 +52,7 @@ var UICalculator = function() {
                 } else if(target.innerHTML === "C"){
                     displayContent.innerHTML = "";
                 } else {
-                    if(/[\+\*\/\-]/.test(displayContent.innerHTML)){
+                    if(op.regex.test(displayContent.innerHTML)){
                         var total = PRIVATE.calculate(displayContent.innerHTML);
                         displayContent.innerHTML = total;
                     }

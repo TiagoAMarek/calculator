@@ -8,23 +8,25 @@ var Operations = function() {
     var PUBLIC  = this,
         PRIVATE = {};
 
-    PRIVATE.divide = function(a, b) {
-        return parseFloat(a)/parseFloat(b);
+    PUBLIC.regex = /[\+\*\/\-]/;
+
+    PRIVATE.divide = function (a, b) {
+        return parseFloat(a) / parseFloat(b);
     };
 
-    PRIVATE.multiply = function(a, b) {
-        return parseFloat(a)*parseFloat(b);
+    PRIVATE.multiply = function (a, b) {
+        return parseFloat(a) * parseFloat(b);
     };
 
-    PRIVATE.subtract = function(a, b) {
-        return parseFloat(a)-parseFloat(b);
+    PRIVATE.subtract = function (a, b) {
+        return parseFloat(a) - parseFloat(b);
     };
 
-    PRIVATE.sum = function(a, b) {
-        return parseFloat(a)+parseFloat(b);
+    PRIVATE.sum = function (a, b) {
+        return parseFloat(a) + parseFloat(b);
     };
 
-    PUBLIC.calculate = function(a, b, op){
+    PUBLIC.calculate = function (a, b, op) {
         var total = 0;
         switch(op){
             case '+':
