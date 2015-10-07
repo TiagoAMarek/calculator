@@ -24,7 +24,7 @@ var UICalculator = function() {
             nextValue = i+1;
             prevValue = i-1;
 
-            if(op.regex.test(str[i]) && str.length > nextValue) {
+            if(op.regex.test(str[i]) && str.length > nextValue && prevValue >= 0) {
                 total = op.calculate(str[prevValue], str[nextValue], str[i]);
                 str[nextValue] = total;
             }
